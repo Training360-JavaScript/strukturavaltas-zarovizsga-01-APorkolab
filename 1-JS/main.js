@@ -63,12 +63,12 @@ const animals = [{
 const animalFilter = (list = animals, pop, zoo) => {
   return list
     .filter(animal => animal.population > pop && animal.zoo <= zoo)
-    .sort((a, b) => b.common_name - a.common_name)
     .map(animal => {
       // animal.vat = product.price * taxRate;
       // animal.bprice = product.price + product.vat;
-      return animal;
+      return animal.common_name;
     })
+    .sort()
 };
 
 if (typeof module !== 'undefined') {
