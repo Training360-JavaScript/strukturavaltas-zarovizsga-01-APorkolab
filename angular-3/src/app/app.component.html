@@ -1,1 +1,28 @@
-<p>app works!</p>
+<div class="col-12 scroll">
+  <table class="table table-striped">
+    <thead>
+      <th>#</th>
+      <th>Material</th>
+      <th>Trade</th>
+      <th>Cost-code</th>
+      <th>Price</th>
+      <th>Active</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of list$ | async">
+        <td>{{ row.id }}</td>
+        <td>{{ row.material }}</td>
+        <td>{{ row.cost_code }}</td>
+        <td>{{ row.price }}</td>
+        <td>{{ row.active }}</td>
+        <td>
+          <div class="btn-group">
+            <button (click)="onDelete(row)" class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
