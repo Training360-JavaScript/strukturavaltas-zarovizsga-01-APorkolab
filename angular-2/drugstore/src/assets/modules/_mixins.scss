@@ -5,4 +5,12 @@
   @media (max-width: 599px) {
     @content
   }
-};
+}
+
+;
+
+@mixin backgroundChanger ($background) {
+  background: $background;
+}
+
+;
