@@ -20,13 +20,15 @@ export class AppComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.list$.subscribe;
+  }
 
   onDelete(construction: Construction) {
     this.constructionService.delete(construction).subscribe(
       (bill) => this.router.navigate(['/', '']),
       (err) => 'Error',
-      () => ''
+      () => ' '
     );
   }
 }
